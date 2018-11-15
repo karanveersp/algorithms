@@ -14,6 +14,8 @@ public class ArrayGenerator {
      * @return int[] with random ints
      */
     public static int[] generateRandomArray(int N) {
+        if (N <= 0)
+            return null;
         Random random = new Random();
         IntStream randInts = random.ints(N, 1, N + 1);
         return randInts.toArray();
@@ -27,6 +29,8 @@ public class ArrayGenerator {
      * @return int[] with random ints
      */
     public static int[] generateRandomArrayNoDuplicates(int N) {
+        if (N <= 0)
+            return null;
         ArrayList<Integer> values = new ArrayList<>();
         Random random = new Random();
 
@@ -40,7 +44,6 @@ public class ArrayGenerator {
         for (int i = 0; i < N; i++) {
             retValues[i] = values.get(i);
         }
-
         return retValues;
     }
 }

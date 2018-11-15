@@ -6,8 +6,7 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 /**
- * This class implements the Selection Sort algorithm. To see the algorithm in
- * action on a real random integer array, run the main method.
+ * This class implements the Selection Sort algorithm.
  * 
  * The complexity of Selection Sort is O(N^2) since it has a loop within a loop structure
  * where the inner loop runs for every value of the outer loop. The inner loop length shrinks by 1
