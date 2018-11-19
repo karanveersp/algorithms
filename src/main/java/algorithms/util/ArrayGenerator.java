@@ -24,6 +24,7 @@ public class ArrayGenerator {
     /**
      * Generates an int[] of random numbers of length N. The random numbers will be
      * [1, N] inclusive. No duplicates.
+     * Is not efficient for large numbers
      * 
      * @param N the length of array and upper bound of random integers
      * @return int[] with random ints

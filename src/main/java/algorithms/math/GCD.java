@@ -11,19 +11,15 @@ public class GCD {
     /**
      * Euclid Algorithm to find the Greatest Common Divisor.
      * Recursive version
+     * Algorithm from Sedgewick's book:
+     * Compute the gcd of two nonnegative integers p and q as follows:
+     * If q is 0, the answer is p. If not, divide p by q and take the remainder
+     * r. The answer is the gcd of q and r.
      */
-    public static int euclidAlgorithm(int m, int n) {
-        if (m == 0 | n == 0)
-            return 0;
-        if (m < n) {
-            int t= m;
-            m = n;
-            n = t;
-        }
-        if (m % n == 0)
-            return n;
-        else 
-            return euclidAlgorithm(n, m % n);
+    public static int gcd(int p, int q) {
+        if (q == 0) return p;
+        int r = p % q;
+        return gcd(q, r);
     }
 
     /**
@@ -63,7 +59,7 @@ public class GCD {
             System.out.print("Ender n: ");
             n = Math.abs(sc.nextInt());
 
-            System.out.println("GCD: " + GCD.euclidAlgorithm(m, n));
+            System.out.println("GCD: " + GCD.gcd(m, n));
             System.out.print("Enter 0 to exit or 1 to try again: ");
             int exit = sc.nextInt();
             if (exit == 0) break;
